@@ -238,12 +238,12 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-24 md:py-36">
         <SectionHead eyebrow="Especialidades" title="Sabores que fazem parte da nossa história." />
         <div className="mt-16 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
-          {[
+          {([
             ["Galeto", "Galeto preparado no estilo tradicional, um dos símbolos da casa.", galeto, "object-bottom"],
             ["Massas frescas", "Massas produzidas na própria cozinha da Casa Muttoni.", massas, ""],
             ["Sequência de massas", "Uma experiência farta com diferentes massas e molhos.", hero, "object-right"],
             ["Vinhos", "Uma seleção de vinhos para acompanhar a experiência.", ambiente, "object-left"],
-          ].map(([t, d, img, pos], i) => (
+          ] as [string, string, string, string][]).map(([t, d, img, pos], i) => (
             <article key={t} className="reveal group" style={{ transitionDelay: `${i * 120}ms` }}>
               <div className="aspect-[3/4] overflow-hidden">
                 <Img src={img} alt={t} w={800} h={1066} className={`${pos} transition-transform duration-[1.6s] group-hover:scale-105`} />
